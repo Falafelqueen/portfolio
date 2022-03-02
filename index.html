@@ -26,9 +26,10 @@
  <section class="banner" >
    <div class="banner-container">
      <div class="banner-text">
-       <h1>What you do is your passion<br>helping you to bring it online is mine</h1>
+       <h1>What you do is your passion<br>helping you bring it online is mine</h1>
       </div>
-      <div class="btn ca-btn"><a href="#contact"><p>Work with me</p></a></div>
+      <p>Hi, my name is Lucia and I am a web developer</p>
+    <a href="#contact"><div class="btn ca-btn"><p>Work with me</p></div></a>
     </div>
     <div class="banner-img">
       <img src="images/profile_img.png" alt="profile picture">
@@ -52,17 +53,147 @@
         enjoy building digital products with purpose and work hard to deliver the best for you and your clients</p>
       </div>
     </div>
-
  </section>
 
+ <section id="services">
+  <h2>How can I help</h2>
+  <div class="main-text-grid">
+    <div class="grid-area image-box">
+      <img src="images/website_illustration.svg" alt="">
+      <h2>You need a website</h2>
+    </div>
+    <div class="grid-area image-box">
+      <img src="images/idea_illustration.svg" alt="">
+      <h2>You have idea for an app</h2>
+    </div>
+    <div class="grid-area image-box">
+      <img src="images/fix_website_illustration.svg" alt="">
+      <h2>You already have a website</h2>
+    </div>
+  </div>
+ </section>
 
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects-holder project-holder-website">
+    <div class="section-container">
+      <div class="project-type-text">
+      <h3>Websites</h3>
+      <p>I build fully responsive websites tailored to your needs. Whether you need a landing page for your business,
+        a blog to share your ideas or a place to sell your products, I can make it for you and you can keep managing the content for years to come.</p>
+        <h4>Technologies</h4>
+        <div class="technologies-grid">
+          <div class="technology-box">
+            <img src="images/js_icon.svg" alt="Javascript logo">
+            <p>Javascript</p>
+          </div>
+          <div class="technology-box">
+            <img src="images/css_icon.svg" alt="CSS logo">
+            <p>CSS</p>
+          </div>
+          <div class="technology-box">
+            <img src="images/html_icon.svg" alt="HTML logo">
+            <p>HTML</p>
+          </div>
+          <div class="technology-box">
+            <img src="images/tailwind_icon.svg" alt="Tailwind logo">
+            <p>Tailwind</p>
+          </div>
+          <div class="technology-box">
+            <img src="images/html_icon.svg" alt="Wordpress logo">
+            <p>Wordpress</p>
+          </div>
+        </div>
+      </div>
+    <div class="section-container-projects section-container-websites">
+      <!-- <div class="section-content">
+        <div class="section-part project-text">
+          <h4><a href="#">Project name</a></h4>
+          <p>Project description</p>
+          <p>MVP</p>
+        </div>
+        <div class="section-part project-img">
+          <div class="img-overlay"></div>
+          <img src="" class="project-picture" alt="project picture">
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <div class="prev-next-controls">
+    <div class="previous-btn prev-website"><img src="images/arrow_left.svg" alt="previous button"></div>
+    <div class="next-btn next-website"><img src="images/arrow_right.svg" alt="next button"></div>
+  </div>
+</div>
+<!-- project type-->
+
+<!-- project preview -->
+  <div class="projects-holder project-holder-webapp">
+    <div class="section-container">
+      <div class="project-type-text">
+        <h3>Web apps</h3>
+        <p>Creating fully functional web applications, designed to fit your needs. From booking platforms and calculators, through two-sided marketplace and goal-tracking apps,to sales software.
+          You just tell me what you need and we will find together the best online solution for the task at hand.</p>
+          <h4>Technologies</h4>
+          <div class="technologies-grid">
+            <div class="technology-box">
+              <img src="images/js_icon.svg" alt="Javascript logo">
+              <p>Javascript</p>
+            </div>
+            <div class="technology-box">
+              <img src="images/rails_icon.svg" alt="CSS logo">
+              <p>Rails</p>
+            </div>
+            <div class="technology-box">
+              <img src="images/ruby_icon.svg" alt="HTML logo">
+              <p>Ruby</p>
+            </div>
+            <div class="technology-box">
+              <img src="images/postgresql_icon.svg" alt="Tailwind logo">
+              <p>PostgreSQL</p>
+            </div>
+            <div class="technology-box">
+              <img src="images/nodejs_icon.svg" alt="Wordpress logo">
+              <p>Node.js</p>
+            </div>
+            <div class="technology-box">
+              <img src="images/rspec_icon.svg" alt="Wordpress logo">
+              <p>Rspec</p>
+            </div>
+          </div>
+      </div>
+        <div class="section-container-projects section-container-webapps">
+        </div>
+      </div>
+        <div class="prev-next-controls">
+          <div class="previous-btn prev-webapp"><img src="images/arrow_left.svg" alt="previous button"></div>
+          <div class="next-btn next-webapp"><img src="images/arrow_right.svg" alt="next button"></div>
+    </div>
+  </div>
+<!-- end of project type -->
+</section>
 <section id="contact">
   <h2>Write me</h2>
+<div class="section-container">
   <p>I can’t wait to here from you and to start building your idea together. Just write me a message or give me a call and we
   can schedule a meeting to see how can I best help.</p>
-  <form action=""></form>
+  <form method="POST" id="contact-form">
+    <div class="form-main">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="contact-name">
+      <label for="email">Email*</label>
+      <input type="text" name="email" id="contact-email" required>
+      <label for="message">Your message*</label>
+      <textarea name="message" id="contact-message" cols="30" rows="10"></textarea>
+      <button type="submit" class="btn">Send</button>
+    </div>
+  </form>
+</div>
 </section>
 
-
+<!-- scripts  -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="components_js/sendEmail.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

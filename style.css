@@ -49,14 +49,30 @@ section{
 .banner{
   position: relative;
 }
+
+.section-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+}
+
 .banner-container{
   display: flex;
   flex-direction: column;
   height: 80vh;
 }
 
+.banner-container a{
+  width: max-content;
+  height: min-content;
+}
+.banner-container p{
+  font-size: var(--small-heading);
+}
 .banner-text{
   align-items: center;
+  margin-top: 40px;
+  z-index: 2;
 }
 
 .banner-img{
@@ -66,25 +82,27 @@ section{
 }
 
 .banner-img img{
-  max-height:500px;
-  object-fit: contain;
+  max-height:450px;
+  width: 500px;
+  object-fit: cover;
 }
-
 
 .btn{
   border: 3px solid var(--light-green);
   width: max-content;
-  padding: 5px 20px;
+  padding: 4px 50px;
+  font-size: var(--small-heading);
 }
 
+.btn.ca-btn{
+  margin-top:45px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
 .btn:hover{
   border: 3px solid var(--petrol);
 }
 
-.btn a > p{
-  font-size: var(--normal-text);
-  font-weight: var(--bold);
-}
+
 
 .nav-bar{
   width:100%;
@@ -110,5 +128,117 @@ section{
 .main-text-grid{
   display: grid;
   grid-auto-flow: column;
-  gap: 50px;
+  gap: 65px;
+  padding: 20px 0px;
+}
+
+/* contact section */
+
+
+
+/* contact form */
+
+.form-main input, .form-main textarea{
+  display: block;
+  width: 100%;
+  outline: none;
+  background-color: var(--whitish);
+  box-shadow: none;
+  border:none;
+  border-bottom: 1px solid var(--dark_blue);
+  margin: 5px 0px 15px;
+}
+.form-main textarea{
+  border: 1px solid var(--dark_blue)
+}
+
+.form-main input:focus{
+  border-bottom: 2px solid var(--dark_blue);
+}
+.form-main textarea:focus{
+  border: 2px solid var(--dark_blue)
+}
+
+
+button.btn {
+outline: none;
+background-color: var(--whitish);
+font-family: var(--main-font);
+font-size: var(--normal-text);
+color: var(--dark_blue)
+}
+
+/* service section */
+
+.image-box img{
+  opacity:0.5;
+  height: 165px;
+  display: block;
+  margin: 10px auto;
+}
+.image-box {
+  text-align:center;
+}
+
+
+
+/* projects  */
+
+.section-container-projects {
+
+}
+
+.section-content{
+  display: none;
+}
+.section-content.active{
+display: block;
+}
+
+.project-img{
+  position:relative;
+  height:100%;
+  max-width: 100%;
+}
+
+.project-img img {
+  width: 100%;
+
+  object-fit: contain;
+}
+.project-img .img-overlay{
+  content: "";
+  background-color: var(--whitish);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.prev-next-controls{
+  display: flex;
+  justify-content: center;
+
+}
+
+.next-btn, .previous-btn {
+  visibility: hidden;
+}
+
+
+
+.project-holder-webapp:hover  .next-webapp, .project-holder-webapp:hover  .prev-webapp {
+  visibility: visible;
+}
+
+.technologies-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.technology-box{
+  text-align: center;
+}
+.technology-box img{
+  height: 50px;
 }
